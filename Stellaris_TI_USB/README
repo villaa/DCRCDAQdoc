@@ -1,0 +1,11 @@
+#need the StellarisWare USB library to talk to the microcontroller:
+
+http://www.ti.com/tool/sw-usb-windrivers
+
+#we use the LM3S5B91 microcontroller for DCRC communication
+
+http://www.ti.com/product/LM3S5B91/technicaldocuments
+
+#I hate not being able to build on Linux, maybe this will help?
+
+http://www.jann.cc/2012/12/11/getting_started_with_the_ti_stellaris_launchpad_on_linux.html
