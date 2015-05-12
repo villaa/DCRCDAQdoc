@@ -93,6 +93,32 @@ Also /Script/Save DCRC settings and /Script/Load DCRC settings.
 
 One way to check that you've set all the files correctly is to start a run and to check the resulting .odb file - are all the paths what you need?
 
+*Update* Anthony made a script to do all these things at once, you have to manually set the `EXP_NAME` and `MIDAS_DIR` variables:
+
+```
+#!/bin/sh
+
+#script to set up specifics of ODB after dcrc_server.exe, towerfe3.exe, triggerfe2.exe
+#initialization. 
+
+EXP_NAME=cdms_UMN
+MIDAS_DIR=/home/hep/cdmssoft/scdmsDAQ/MidasDAQ/online
+
+odbedit -e ${EXP_NAME} -c 'create STRING "/Logger/History dir"[256]'
+odbedit -e ${EXP_NAME} -c 'set "/Logger/History dir" "/home/hep/cdmssoft/scdmsDAQ/MidasDAQ/online/history/"'
+odbedit -e ${EXP_NAME} -c 'create STRING "/Logger/Elog dir"[256]'
+odbedit -e ${EXP_NAME} -c 'set "/Logger/Elog dir" "/home/hep/cdmssoft/scdmsDAQ/MidasDAQ/online/elog/"'
+odbedit -e ${EXP_NAME} -c 'set "/Logger/ODB Dump" y'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/dcrc_driver01/Start command" "'${MIDAS_DIR}'/src/dcrc_driver.exe -i 1 -D"'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/dcrc_driver01/Required" y'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/towerfe3_01/Start command" "'${MIDAS_DIR}'/src/towerfe3.exe -i 1 -D"'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/towerfe3_01/Required" y'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/triggerfe2/Start command" "'${MIDAS_DIR}'/src/triggerfe2.exe -D"'
+odbedit -e ${EXP_NAME} -c 'set "/Programs/triggerfe2/Required" y'
+odbedit -e ${EXP_NAME} -c 'create STRING "/Playground/Run sequence"[256]'
+odbedit -e ${EXP_NAME} -c 'set "/Playground/Run sequence" no_flash'
+#odbedit -e ${EXP_NAME} -c 'del "/Playground/Run sequence"'
+```
 
 
 Taking data
