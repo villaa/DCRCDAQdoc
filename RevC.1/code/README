@@ -1,0 +1,4 @@
+Date: May 13 2015
+#The code in this directory was obtained from Jon Wilson in an email dated Jan 23 2015 I think it
+#I think it is meant for the FPGA programming and I'm not sure if that gets done through the
+#microcontroller programming (firmware) or a separate JTAG chain.  I would think the latter. 
