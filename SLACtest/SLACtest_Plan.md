@@ -16,7 +16,7 @@ Subsystems and WBS Tasks
 Tuning Tools/SQUID Data (Bruno/Bill/Bruce)
 ------------------------------------------
 
-**Overview:** We would like to get an overall picture of the noise performance of the SQUIDs with
+**Overview:** We want to get an overall picture of the noise performance of the SQUIDs with
 the RevD board and work out the bugs in the tuning of SQUIDs with RevD, and HEMPT performance if
 possible.  Some SQUID work has been done already with the RevD, so we wish to compare to those
 results from Bruce.
@@ -38,11 +38,45 @@ functionality in any setup.  We would also like to develop a way to check the OD
 directory structure and prune any extraneous directories, this check can also be used by the other
 subsystems in the future. 
 
+  1. set up the ODB correctly for RevD running
+  2. start the driver running in the SLAC DAQ setup
+  3. verify the driver sets appropriate parameters on DCRC RevD (1.6.8.3.1)
+  4. modify driver test script to be fully comprehensive for RevD (1.6.8.3.1)
+  5. consider ways to automate the ODB setup, for example user says how many detectors and which revisions and a script constructs an appropriate ODB (1.6.8.1.9)
+
 DCRC RevD Javascript UI (Amy/Xuji)
 ----------------------------------
+
+**Overview:** We want to be sure that the UI is interfacing correctly for all settings presented
+by the RevD DCRC.  Also, we should check that the run control and flash pages are interfacing with
+the (updated for RevD) python interfaces correctly.  Finally, this might be a good opportunity to
+do well-defined tests of mhttpd in terms of simultaneous user requests.
+
+  1. use the UI to modify detector settings during SQUID tuning (1.6.8.3.3)
+  2. fix bugs that come up (1.6.8.3.3)
+  3. initiate "flashandflash" and "flashandtake" sequences and be sure DCRC responds (1.6.8.3.2)
+  4. initiate "production" data taking via the run control page (1.6.8.3.2)
+  5. save and recover settings to the ODB (1.6.8.3.2)
+  6. attempt to scriptify the verifications done in this section (1.6.8.3.2)
 
 Python Sequencer Interface (Amy/Anthony)
 ----------------------------------------
 
+**Overview:** We want to be sure the sequencer can be used with RevD correctly, this is especially
+important for project detector/tower testing or any production data.  Currently we know that the
+sequencer is build for the ODB for the old RevC driver only, we will need to assess what to
+upgrade in this test and upgrade it.
+
 File Naming, Throughput, and Processing (Anthony/Amy)
 -----------------------------------------------------
+
+**Overview:** We want to be sure we can take end-to-end data in the SuperCDMS data format in at
+least as automated a way as UMN can currently do with the old RevC driver.  We can use "randoms"
+data for this.  Here we basically make sure that the "flashandtake" works and that the data is
+written in the appropriate RevD format.  We then check if the data can be processed as it is at
+UMN. 
+
+Metrics for Success
+===================
+
+Fail? Us?
