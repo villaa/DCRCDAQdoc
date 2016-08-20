@@ -40,9 +40,10 @@ subsystems in the future.
 
   1. set up the ODB correctly for RevD running
   2. start the driver running in the SLAC DAQ setup
-  3. verify the driver sets appropriate parameters on DCRC RevD (1.6.8.3.1)
-  4. modify driver test script to be fully comprehensive for RevD (1.6.8.3.1)
-  5. consider ways to automate the ODB setup, for example user says how many detectors and which revisions and a script constructs an appropriate ODB (1.6.8.1.9)
+  3. implement beginning-of-run and end-of-run randoms with DCRC RevD (1.6.8.3.3)
+  4. verify the driver sets appropriate parameters on DCRC RevD (1.6.8.3.1)
+  5. modify driver test script to be fully comprehensive for RevD (1.6.8.3.1)
+  6. consider ways to automate the ODB setup, for example user says how many detectors and which revisions and a script constructs an appropriate ODB (1.6.8.1.9)
 
 DCRC RevD Javascript UI (Amy/Xuji)
 ----------------------------------
