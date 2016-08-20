@@ -67,6 +67,9 @@ important for project detector/tower testing or any production data.  Currently 
 sequencer is build for the ODB for the old RevC driver only, we will need to assess what to
 upgrade in this test and upgrade it.
 
+  1. make sequencer scripts that work for RevD and general JSON input (1.6.8.3.4)
+  2. assess the possibility of merging with the RevC scripts, need info about the ODB structure (1.6.8.3.2)
+
 File Naming, Throughput, and Processing (Anthony/Amy)
 -----------------------------------------------------
 
@@ -75,6 +78,12 @@ least as automated a way as UMN can currently do with the old RevC driver.  We c
 data for this.  Here we basically make sure that the "flashandtake" works and that the data is
 written in the appropriate RevD format.  We then check if the data can be processed as it is at
 UMN. 
+
+  1. be sure the file naming conventions are set up correctly, and the LazyLogger works (1.6.8.3.4)
+  2. take data with randoms in the SuperCDMS RevD data format (1.6.8.3.4)
+  3. check the output data format (1.6.8.1.12)
+  4. take automated data with "flash and take" (1.6.8.3.4)
+  5. process the data that is taken (1.6.8.3.5)
 
 Metrics for Success
 ===================
