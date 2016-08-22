@@ -39,7 +39,7 @@ directory structure and prune any extraneous directories, this check can also be
 subsystems in the future. 
 
   1. set up the ODB correctly for RevD running
-  2. start the driver running in the SLAC DAQ setup
+  2. start the driver running in the SLAC DAQ setup ![check](kcKB8pagi.jpg)
   3. implement beginning-of-run and end-of-run randoms with DCRC RevD (1.6.8.3.3)
   4. verify the driver sets appropriate parameters on DCRC RevD (1.6.8.3.1)
   5. modify driver test script to be fully comprehensive for RevD (1.6.8.3.1)
