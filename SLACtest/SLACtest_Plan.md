@@ -10,6 +10,8 @@ doing so at other test facilities.  See the
 [schedule](https://docs.google.com/spreadsheets/d/1VAQoLa731FfMSn3HfJ6pI_jqgKuAKb9sYWb9WtMWHzI/edit#gid=1478419570)
 for task details.
 
+At the end of the SLAC test we plan to tag a release of both MidasTools and MidasDAQ repositories. 
+
 Subsystems and WBS Tasks
 ========================
 
@@ -17,17 +19,18 @@ Tuning Tools/SQUID Data (Bruno/Bill/Bruce)
 ------------------------------------------
 
 **Overview:** We want to get an overall picture of the noise performance of the SQUIDs with
-the RevD board and work out the bugs in the tuning of SQUIDs with RevD, and HEMPT performance if
+the RevD board and work out the bugs in the tuning of SQUIDs with RevD, and HEMT performance if
 possible.  Some SQUID work has been done already with the RevD, so we wish to compare to those
 results from Bruce.
 
  1. connect to SQUIDs using the DCRC RevD interface and the ROOT tuning GUI
  2. tune each available SQUID form maximum modulation depth (1.6.8.3.3 and 1.6.8.3.6)
- 3. obtain PSDs for the SQUIDs referred to input current (1.6.8.3.4)
- 4. save modulation curves for the SQUIDs (1.6.8.3.4 and 1.6.8.3.6)
- 5. compare modulation curves and PSDs to previous values obtained by Bruce (1.6.8.3.5)
- 6. connect to HEMPTs (1.6.8.3.3) 
- 7. get PSDs from HEMPTs (1.6.8.3.4) 
+ 3. test the ZAP of the SQUIDs via the Python scripts
+ 4. obtain PSDs for the SQUIDs referred to input current (1.6.8.3.4)
+ 5. save modulation curves for the SQUIDs (1.6.8.3.4 and 1.6.8.3.6)
+ 6. compare modulation curves and PSDs to previous values obtained by Bruce (1.6.8.3.5)
+ 7. connect to HEMTs (1.6.8.3.3) 
+ 8. get PSDs from HEMTs (1.6.8.3.4) 
 
 RevD Driver/ODB (Belina/Scott)
 ------------------------------
